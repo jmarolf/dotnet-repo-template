@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "jmarolf",
+    "classifications": ["github", "repo"],
+    "name": "repo template",
+    "generatorVersions": "[1.0.0.0-*)",
+    "description": "A project template for creating new github repo.",
+    "groupIdentity": "jmarolf.Repo",
+    "identity": "jmarolf.Repo.Nuget.CSharp",
+    "shortName": "repo",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "Company.MyProject",
+    "preferNameDirectory": true,
+    "sources": [
+
+    ],
+    "symbols": {
+        "copyrightName": {
+            "type": "parameter",
+            "defaultValue": "John Smith",
+            "replaces": "(copyright)"
+        },
+        "title": {
+            "type": "parameter",
+            "defaultValue": "Your title",
+            "replaces": "My App Title"
+        }
+    }
+}

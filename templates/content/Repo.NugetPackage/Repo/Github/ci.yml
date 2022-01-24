@@ -34,7 +34,7 @@ jobs:
       - name: Validate dependencies
         run: dotnet restore --locked-mode --packages ${{ github.workspace }}/.nuget/packages
       - name: Build
-        run: dotnet msbuild -p:Configuration=${{ matrix.configuration }} -graph -isolate -p:TreatWarningsAsErrors=true -bl:artifacts/log/build.binlog
+        run: dotnet msbuild -p:Configuration=${{ matrix.configuration }} -graph -isolate -bl:artifacts/log/build.binlog
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v2.3.1
         with:

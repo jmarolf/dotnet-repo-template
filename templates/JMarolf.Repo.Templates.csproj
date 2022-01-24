@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard1.0</TargetFramework>
+        <IncludeBuildOutput>False</IncludeBuildOutput>
+        <IncludeSource>False</IncludeSource>
+        <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+        <EnableDefaultItems>False</EnableDefaultItems>
+        <IsPackable>true</IsPackable>
+        <NoWarn>$(NoWarn);2008;NU5105</NoWarn>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
+        <PackageId>JMarolf.Repo.Templates</PackageId>
+        <Authors>jmarolf</Authors>
+        <Description>Common File Templates for Microsoft Template Engine</Description>
+        <language>en-US</language>
+        <PackageType>Template</PackageType>
+        <SuppressDependenciesWhenPacking>True</SuppressDependenciesWhenPacking>
+        <!-- <NoDefaultExcludes>true</NoDefaultExcludes> -->
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Remove="Microsoft.NETCore.App" />
+        <Content Include="content\**">
+            <PackagePath>content</PackagePath>
+        </Content>
+    </ItemGroup>
+</Project>
